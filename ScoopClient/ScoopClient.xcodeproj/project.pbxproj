@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C139ACC1DC684840031A24F /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C139ACB1DC684840031A24F /* MicrosoftAzureMobile.framework */; };
 		1C2E0D7E1DC66744000A3C59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0D7D1DC66744000A3C59 /* AppDelegate.swift */; };
 		1C2E0D861DC66744000A3C59 /* ScoopClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0D841DC66744000A3C59 /* ScoopClient.xcdatamodeld */; };
 		1C2E0D881DC66744000A3C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2E0D871DC66744000A3C59 /* Assets.xcassets */; };
@@ -15,7 +16,6 @@
 		1C2E0DB11DC67660000A3C59 /* ScoopsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0DAF1DC67660000A3C59 /* ScoopsTableViewController.swift */; };
 		1C2E0DB51DC676CE000A3C59 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0DB31DC676CE000A3C59 /* MainViewController.swift */; };
 		1C2E0DB61DC676CE000A3C59 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C2E0DB41DC676CE000A3C59 /* MainViewController.xib */; };
-		1C2E0DB81DC677B7000A3C59 /* AZSClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C2E0DB71DC677B7000A3C59 /* AZSClient.framework */; };
 		1C2E0DBB1DC677D7000A3C59 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C2E0DBA1DC677D7000A3C59 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C139ACA1DC6833D0031A24F /* App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "App-Bridging-Header.h"; sourceTree = "<group>"; };
+		1C139ACB1DC684840031A24F /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
 		1C2E0D7A1DC66744000A3C59 /* ScoopClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoopClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2E0D7D1DC66744000A3C59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C2E0D851DC66744000A3C59 /* ScoopClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScoopClient.xcdatamodel; sourceTree = "<group>"; };
@@ -51,9 +53,7 @@
 		1C2E0DAF1DC67660000A3C59 /* ScoopsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoopsTableViewController.swift; sourceTree = "<group>"; };
 		1C2E0DB31DC676CE000A3C59 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1C2E0DB41DC676CE000A3C59 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		1C2E0DB71DC677B7000A3C59 /* AZSClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AZSClient.framework; path = ScoopClient/AZSClient.framework; sourceTree = "<group>"; };
 		1C2E0DBA1DC677D7000A3C59 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		1C2E0DBD1DC6788F000A3C59 /* MyApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyApp-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C2E0DBB1DC677D7000A3C59 /* WebKit.framework in Frameworks */,
-				1C2E0DB81DC677B7000A3C59 /* AZSClient.framework in Frameworks */,
+				1C139ACC1DC684840031A24F /* MicrosoftAzureMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +86,7 @@
 		1C2E0D711DC66744000A3C59 = {
 			isa = PBXGroup;
 			children = (
+				1C139ACA1DC6833D0031A24F /* App-Bridging-Header.h */,
 				1C2E0D7C1DC66744000A3C59 /* ScoopClient */,
 				1C2E0D941DC66744000A3C59 /* ScoopClientTests */,
 				1C2E0D9F1DC66744000A3C59 /* ScoopClientUITests */,
@@ -107,7 +108,6 @@
 		1C2E0D7C1DC66744000A3C59 /* ScoopClient */ = {
 			isa = PBXGroup;
 			children = (
-				1C2E0DBD1DC6788F000A3C59 /* MyApp-Bridging-Header.h */,
 				1C2E0DAE1DC675A3000A3C59 /* Controllers */,
 				1C2E0D7D1DC66744000A3C59 /* AppDelegate.swift */,
 				1C2E0D871DC66744000A3C59 /* Assets.xcassets */,
@@ -149,7 +149,7 @@
 		1C2E0DB91DC677D7000A3C59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1C2E0DB71DC677B7000A3C59 /* AZSClient.framework */,
+				1C139ACB1DC684840031A24F /* MicrosoftAzureMobile.framework */,
 				1C2E0DBA1DC677D7000A3C59 /* WebKit.framework */,
 			);
 			name = Frameworks;
@@ -427,12 +427,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ScoopClient",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ScoopClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.keepcodingalumni.ScoopClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MyApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "App-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -444,12 +445,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ScoopClient",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ScoopClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.keepcodingalumni.ScoopClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MyApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "App-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -527,6 +529,7 @@
 				1C2E0DA71DC66744000A3C59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C2E0DA81DC66744000A3C59 /* Build configuration list for PBXNativeTarget "ScoopClientTests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +538,7 @@
 				1C2E0DAA1DC66744000A3C59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C2E0DAB1DC66744000A3C59 /* Build configuration list for PBXNativeTarget "ScoopClientUITests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +547,7 @@
 				1C2E0DAD1DC66744000A3C59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
