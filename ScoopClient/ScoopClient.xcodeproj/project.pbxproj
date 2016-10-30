@@ -16,8 +16,6 @@
 		1C2E0D961DC66744000A3C59 /* ScoopClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0D951DC66744000A3C59 /* ScoopClientTests.swift */; };
 		1C2E0DA11DC66744000A3C59 /* ScoopClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0DA01DC66744000A3C59 /* ScoopClientUITests.swift */; };
 		1C2E0DB11DC67660000A3C59 /* ScoopsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0DAF1DC67660000A3C59 /* ScoopsTableViewController.swift */; };
-		1C2E0DB51DC676CE000A3C59 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0DB31DC676CE000A3C59 /* MainViewController.swift */; };
-		1C2E0DB61DC676CE000A3C59 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C2E0DB41DC676CE000A3C59 /* MainViewController.xib */; };
 		1C2E0DBB1DC677D7000A3C59 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C2E0DBA1DC677D7000A3C59 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +53,6 @@
 		1C2E0DA01DC66744000A3C59 /* ScoopClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoopClientUITests.swift; sourceTree = "<group>"; };
 		1C2E0DA21DC66744000A3C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C2E0DAF1DC67660000A3C59 /* ScoopsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoopsTableViewController.swift; sourceTree = "<group>"; };
-		1C2E0DB31DC676CE000A3C59 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		1C2E0DB41DC676CE000A3C59 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		1C2E0DBA1DC677D7000A3C59 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -145,8 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				1C2E0DAF1DC67660000A3C59 /* ScoopsTableViewController.swift */,
-				1C2E0DB31DC676CE000A3C59 /* MainViewController.swift */,
-				1C2E0DB41DC676CE000A3C59 /* MainViewController.xib */,
 			);
 			name = Controllers;
 			path = ..;
@@ -270,7 +264,6 @@
 			files = (
 				1C139ACF1DC6874E0031A24F /* LaunchScreen.storyboard in Resources */,
 				1C2E0D881DC66744000A3C59 /* Assets.xcassets in Resources */,
-				1C2E0DB61DC676CE000A3C59 /* MainViewController.xib in Resources */,
 				1C139AD21DC687550031A24F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,7 +292,6 @@
 				1C2E0DB11DC67660000A3C59 /* ScoopsTableViewController.swift in Sources */,
 				1C2E0D861DC66744000A3C59 /* ScoopClient.xcdatamodeld in Sources */,
 				1C2E0D7E1DC66744000A3C59 /* AppDelegate.swift in Sources */,
-				1C2E0DB51DC676CE000A3C59 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Create rootVC
-        let mVC = MainViewController(nibName: "MainViewController", bundle: nil)
+        let mVC = ScoopsTableViewController(nibName: nil, bundle: nil)
         
         let navVC = UINavigationController(rootViewController: mVC)
         
