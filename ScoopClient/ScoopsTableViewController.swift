@@ -221,4 +221,72 @@ class ScoopsTableViewController: UITableViewController {
         }
     }
  */
+    
+    /*
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        /*
+        let footerView : UIView?
+        footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 70))
+        footerView?.backgroundColor = UIColor.black
+        
+        let dunamicButton = UIButton(type: UIButtonType.system)
+        dunamicButton.backgroundColor = UIColor.green
+        dunamicButton.setTitle("Login", for: UIControlState.normal)
+        dunamicButton.frame = CGRect(x: 0, y: 0, width: 100, height: 70)
+        dunamicButton.addTarget(self, action: "buttonTouched:", for: UIControlEvents.touchUpInside)
+        
+        footerView?.addSubview(dunamicButton)
+        
+        return footerView
+        */
+        let titelArr: NSArray = ["1", "2", "3", "4", "5", "6"]
+        
+        var headerFrame = tableView.frame
+        
+        var headerView:UIView = UIView(frame: CGRect(x: 0, y: 0, width: headerFrame.size.width, height: headerFrame.size.height))
+        headerView.backgroundColor = UIColor(red: 108/255, green: 185/255, blue: 0/255, alpha: 0.9)
+        
+        var title = UILabel()
+        //title.setTranslatesAutoresizingMaskIntoConstraints(false)
+        title.font = UIFont.boldSystemFont(ofSize: 20.0)
+        title.text = titelArr.object(at: section) as? String
+        title.textColor = UIColor.white
+        headerView.addSubview(title)
+        
+        var headBttn:UIButton = UIButton(type: UIButtonType.system) as UIButton
+        //headBttn.setTranslatesAutoresizingMaskIntoConstraints(false)
+        headBttn.isEnabled = true
+        headBttn.titleLabel?.text = title.text
+        headBttn.tag = titelArr.index(of: titelArr.object(at: section))
+        //headBttn.tag = "Hola"
+        headBttn.addTarget(self, action: "buttonTouched:", for: UIControlEvents.touchUpInside)
+        headerView.addSubview(headBttn)
+        
+        var viewsDict = Dictionary <String, UIView>()
+        viewsDict["title"] = title
+        viewsDict["headBttn"] = headBttn
+        /*
+        headerView.addConstraints(
+            NSLayoutConstraint.constraintsWithVisualFormat(
+                "H:|-10-[title]-[headBttn]-15-|", options: nil, metrics: nil, views: viewsDict))
+        
+        headerView.addConstraints(
+            NSLayoutConstraint.constraintsWithVisualFormat(
+                "V:|-[title]-|", options: nil, metrics: nil, views: viewsDict))
+        headerView.addConstraints(
+            NSLayoutConstraint.constraintsWithVisualFormat(
+                "V:|-[headBttn]-|", options: nil, metrics: nil, views: viewsDict))
+        */
+        return headerView
+    }
+    
+    func buttonTouched(sender: UIButton!) {
+        
+        print("Working")
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50.0
+    }
+ */
 }

@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+        /*
         // Create rootVC
-        let mVC = ScoopsTableViewController(nibName: nil, bundle: nil)
+        let mVC = MainViewController(nibName: nil, bundle: nil)
         
         let navVC = UINavigationController(rootViewController: mVC)
         
@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Put rootVC into window and show it
         window?.rootViewController = navVC
         window?.makeKeyAndVisible()
-        
+        */
         return true
     }
 
