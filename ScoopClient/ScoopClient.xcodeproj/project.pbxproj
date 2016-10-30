@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1C139ACC1DC684840031A24F /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C139ACB1DC684840031A24F /* MicrosoftAzureMobile.framework */; };
+		1C139ACF1DC6874E0031A24F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C139ACD1DC6874E0031A24F /* LaunchScreen.storyboard */; };
+		1C139AD21DC687550031A24F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C139AD01DC687550031A24F /* Main.storyboard */; };
 		1C2E0D7E1DC66744000A3C59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0D7D1DC66744000A3C59 /* AppDelegate.swift */; };
 		1C2E0D861DC66744000A3C59 /* ScoopClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0D841DC66744000A3C59 /* ScoopClient.xcdatamodeld */; };
 		1C2E0D881DC66744000A3C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2E0D871DC66744000A3C59 /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		1C139ACA1DC6833D0031A24F /* App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "App-Bridging-Header.h"; sourceTree = "<group>"; };
 		1C139ACB1DC684840031A24F /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
+		1C139ACE1DC6874E0031A24F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1C139AD11DC687550031A24F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C2E0D7A1DC66744000A3C59 /* ScoopClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoopClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2E0D7D1DC66744000A3C59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C2E0D851DC66744000A3C59 /* ScoopClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScoopClient.xcdatamodel; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				1C2E0DAE1DC675A3000A3C59 /* Controllers */,
 				1C2E0D7D1DC66744000A3C59 /* AppDelegate.swift */,
 				1C2E0D871DC66744000A3C59 /* Assets.xcassets */,
+				1C139ACD1DC6874E0031A24F /* LaunchScreen.storyboard */,
+				1C139AD01DC687550031A24F /* Main.storyboard */,
 				1C2E0D8C1DC66744000A3C59 /* Info.plist */,
 				1C2E0D841DC66744000A3C59 /* ScoopClient.xcdatamodeld */,
 			);
@@ -262,8 +268,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C139ACF1DC6874E0031A24F /* LaunchScreen.storyboard in Resources */,
 				1C2E0D881DC66744000A3C59 /* Assets.xcassets in Resources */,
 				1C2E0DB61DC676CE000A3C59 /* MainViewController.xib in Resources */,
+				1C139AD21DC687550031A24F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +333,25 @@
 			targetProxy = 1C2E0D9D1DC66744000A3C59 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1C139ACD1DC6874E0031A24F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C139ACE1DC6874E0031A24F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1C139AD01DC687550031A24F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C139AD11DC687550031A24F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1C2E0DA31DC66744000A3C59 /* Debug */ = {
