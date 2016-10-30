@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1C2E0D7E1DC66744000A3C59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0D7D1DC66744000A3C59 /* AppDelegate.swift */; };
-		1C2E0D801DC66744000A3C59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0D7F1DC66744000A3C59 /* ViewController.swift */; };
-		1C2E0D831DC66744000A3C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2E0D811DC66744000A3C59 /* Main.storyboard */; };
 		1C2E0D861DC66744000A3C59 /* ScoopClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0D841DC66744000A3C59 /* ScoopClient.xcdatamodeld */; };
 		1C2E0D881DC66744000A3C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2E0D871DC66744000A3C59 /* Assets.xcassets */; };
-		1C2E0D8B1DC66744000A3C59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2E0D891DC66744000A3C59 /* LaunchScreen.storyboard */; };
 		1C2E0D961DC66744000A3C59 /* ScoopClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0D951DC66744000A3C59 /* ScoopClientTests.swift */; };
 		1C2E0DA11DC66744000A3C59 /* ScoopClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0DA01DC66744000A3C59 /* ScoopClientUITests.swift */; };
+		1C2E0DB11DC67660000A3C59 /* ScoopsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0DAF1DC67660000A3C59 /* ScoopsTableViewController.swift */; };
+		1C2E0DB51DC676CE000A3C59 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0DB31DC676CE000A3C59 /* MainViewController.swift */; };
+		1C2E0DB61DC676CE000A3C59 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C2E0DB41DC676CE000A3C59 /* MainViewController.xib */; };
+		1C2E0DB81DC677B7000A3C59 /* AZSClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C2E0DB71DC677B7000A3C59 /* AZSClient.framework */; };
+		1C2E0DBB1DC677D7000A3C59 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C2E0DBA1DC677D7000A3C59 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +39,8 @@
 /* Begin PBXFileReference section */
 		1C2E0D7A1DC66744000A3C59 /* ScoopClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoopClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2E0D7D1DC66744000A3C59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1C2E0D7F1DC66744000A3C59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1C2E0D821DC66744000A3C59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C2E0D851DC66744000A3C59 /* ScoopClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScoopClient.xcdatamodel; sourceTree = "<group>"; };
 		1C2E0D871DC66744000A3C59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1C2E0D8A1DC66744000A3C59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C2E0D8C1DC66744000A3C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C2E0D911DC66744000A3C59 /* ScoopClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoopClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2E0D951DC66744000A3C59 /* ScoopClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoopClientTests.swift; sourceTree = "<group>"; };
@@ -49,6 +48,12 @@
 		1C2E0D9C1DC66744000A3C59 /* ScoopClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoopClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2E0DA01DC66744000A3C59 /* ScoopClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoopClientUITests.swift; sourceTree = "<group>"; };
 		1C2E0DA21DC66744000A3C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C2E0DAF1DC67660000A3C59 /* ScoopsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoopsTableViewController.swift; sourceTree = "<group>"; };
+		1C2E0DB31DC676CE000A3C59 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1C2E0DB41DC676CE000A3C59 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		1C2E0DB71DC677B7000A3C59 /* AZSClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AZSClient.framework; path = ScoopClient/AZSClient.framework; sourceTree = "<group>"; };
+		1C2E0DBA1DC677D7000A3C59 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		1C2E0DBD1DC6788F000A3C59 /* MyApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyApp-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C2E0DBB1DC677D7000A3C59 /* WebKit.framework in Frameworks */,
+				1C2E0DB81DC677B7000A3C59 /* AZSClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +90,7 @@
 				1C2E0D941DC66744000A3C59 /* ScoopClientTests */,
 				1C2E0D9F1DC66744000A3C59 /* ScoopClientUITests */,
 				1C2E0D7B1DC66744000A3C59 /* Products */,
+				1C2E0DB91DC677D7000A3C59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,11 +107,10 @@
 		1C2E0D7C1DC66744000A3C59 /* ScoopClient */ = {
 			isa = PBXGroup;
 			children = (
+				1C2E0DBD1DC6788F000A3C59 /* MyApp-Bridging-Header.h */,
+				1C2E0DAE1DC675A3000A3C59 /* Controllers */,
 				1C2E0D7D1DC66744000A3C59 /* AppDelegate.swift */,
-				1C2E0D7F1DC66744000A3C59 /* ViewController.swift */,
-				1C2E0D811DC66744000A3C59 /* Main.storyboard */,
 				1C2E0D871DC66744000A3C59 /* Assets.xcassets */,
-				1C2E0D891DC66744000A3C59 /* LaunchScreen.storyboard */,
 				1C2E0D8C1DC66744000A3C59 /* Info.plist */,
 				1C2E0D841DC66744000A3C59 /* ScoopClient.xcdatamodeld */,
 			);
@@ -126,6 +133,26 @@
 				1C2E0DA21DC66744000A3C59 /* Info.plist */,
 			);
 			path = ScoopClientUITests;
+			sourceTree = "<group>";
+		};
+		1C2E0DAE1DC675A3000A3C59 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C2E0DAF1DC67660000A3C59 /* ScoopsTableViewController.swift */,
+				1C2E0DB31DC676CE000A3C59 /* MainViewController.swift */,
+				1C2E0DB41DC676CE000A3C59 /* MainViewController.xib */,
+			);
+			name = Controllers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		1C2E0DB91DC677D7000A3C59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C2E0DB71DC677B7000A3C59 /* AZSClient.framework */,
+				1C2E0DBA1DC677D7000A3C59 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +262,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C2E0D8B1DC66744000A3C59 /* LaunchScreen.storyboard in Resources */,
 				1C2E0D881DC66744000A3C59 /* Assets.xcassets in Resources */,
-				1C2E0D831DC66744000A3C59 /* Main.storyboard in Resources */,
+				1C2E0DB61DC676CE000A3C59 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C2E0DB11DC67660000A3C59 /* ScoopsTableViewController.swift in Sources */,
 				1C2E0D861DC66744000A3C59 /* ScoopClient.xcdatamodeld in Sources */,
-				1C2E0D801DC66744000A3C59 /* ViewController.swift in Sources */,
 				1C2E0D7E1DC66744000A3C59 /* AppDelegate.swift in Sources */,
+				1C2E0DB51DC676CE000A3C59 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,25 +325,6 @@
 			targetProxy = 1C2E0D9D1DC66744000A3C59 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		1C2E0D811DC66744000A3C59 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1C2E0D821DC66744000A3C59 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1C2E0D891DC66744000A3C59 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1C2E0D8A1DC66744000A3C59 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1C2E0DA31DC66744000A3C59 /* Debug */ = {
@@ -416,10 +424,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ScoopClient",
+				);
 				INFOPLIST_FILE = ScoopClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.keepcodingalumni.ScoopClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -428,10 +441,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ScoopClient",
+				);
 				INFOPLIST_FILE = ScoopClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.keepcodingalumni.ScoopClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
