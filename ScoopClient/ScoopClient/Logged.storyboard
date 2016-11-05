@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Logged View Controller-->
+        <scene sceneID="Hxt-lz-1j6">
+            <objects>
+                <tableViewController id="FKY-1a-SSe" customClass="LoggedViewController" customModule="PracticaAWS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3zP-76-7Vd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DNJ-Ti-EfQ">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DNJ-Ti-EfQ" id="xcn-KM-kbX">
+                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FKY-1a-SSe" id="eHo-h1-k3k"/>
+                            <outlet property="delegate" destination="FKY-1a-SSe" id="yi5-mL-nuQ"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Login" id="dDJ-D7-3mX">
+                            <connections>
+                                <action selector="loginWithTwitterAction:" destination="FKY-1a-SSe" id="Jc2-Id-YKN"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="aQf-cL-FQ0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="i7y-dr-zSZ">
+                            <connections>
+                                <segue destination="3EZ-21-ebQ" kind="show" identifier="newPost" id="RRA-6f-jhg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Age-ME-dcx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1111.2" y="134.48275862068968"/>
+        </scene>
+        <!--New Post View Controller-->
+        <scene sceneID="nqx-lY-4e0">
+            <objects>
+                <viewController id="3EZ-21-ebQ" customClass="NewPostViewController" customModule="PracticaAWS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ySy-aO-5Nc"/>
+                        <viewControllerLayoutGuide type="bottom" id="wrX-qI-EdI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RSW-Zv-XgN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escribe un titulo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nQy-Ap-4UG">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escribe un texto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EsM-yU-aWb">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EsM-yU-aWb" firstAttribute="trailing" secondItem="nQy-Ap-4UG" secondAttribute="trailing" id="5C0-oF-pH7"/>
+                            <constraint firstItem="EsM-yU-aWb" firstAttribute="leading" secondItem="nQy-Ap-4UG" secondAttribute="leading" id="7OL-Mf-9Hf"/>
+                            <constraint firstItem="nQy-Ap-4UG" firstAttribute="trailing" secondItem="RSW-Zv-XgN" secondAttribute="trailingMargin" id="Bo4-iJ-iY7"/>
+                            <constraint firstItem="nQy-Ap-4UG" firstAttribute="top" secondItem="ySy-aO-5Nc" secondAttribute="bottom" constant="40" id="boC-HG-AjA"/>
+                            <constraint firstItem="nQy-Ap-4UG" firstAttribute="leading" secondItem="RSW-Zv-XgN" secondAttribute="leadingMargin" id="ics-1T-la5"/>
+                            <constraint firstItem="EsM-yU-aWb" firstAttribute="top" secondItem="nQy-Ap-4UG" secondAttribute="bottom" constant="22" id="tGc-na-RDE"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Upload" id="yEw-pE-Pcx">
+                            <connections>
+                                <action selector="uploadAction:" destination="3EZ-21-ebQ" id="xmu-G5-hMY"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <connections>
+                        <outlet property="postTxt" destination="EsM-yU-aWb" id="Vt8-hK-PJt"/>
+                        <outlet property="titleTxt" destination="nQy-Ap-4UG" id="RJO-8s-b7g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KfG-pw-ogV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912.8" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="n3k-Tp-GBR">
+            <objects>
+                <navigationController storyboardIdentifier="loggedScene" automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="Hhz-mS-FtA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aB2-gY-zmD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="fUD-3u-2iQ">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="FKY-1a-SSe" kind="relationship" relationship="rootViewController" id="pOB-K4-KcU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MQR-Q2-jHC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="134.48275862068968"/>
+        </scene>
+    </scenes>
+</document>

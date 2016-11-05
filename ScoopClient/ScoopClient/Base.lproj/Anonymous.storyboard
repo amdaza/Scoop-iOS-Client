@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Title-->
         <scene sceneID="JfZ-9Q-XsT">
             <objects>
                 <tableViewController id="HvR-dc-x2a" customClass="ScoopsTableViewController" customModule="ScoopClient" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,11 +15,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="b4P-Ar-eus">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScoopCell" id="b4P-Ar-eus">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b4P-Ar-eus" id="Ttz-6Q-Our">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -29,7 +29,13 @@
                             <outlet property="delegate" destination="HvR-dc-x2a" id="3bE-D3-cEv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Y88-Cy-4gF"/>
+                    <navigationItem key="navigationItem" title="Title" id="52c-jS-ll9" userLabel="Navigation Item">
+                        <barButtonItem key="rightBarButtonItem" title="Login" id="FY8-dR-Zlm">
+                            <connections>
+                                <action selector="customAction:" destination="HvR-dc-x2a" id="eYP-B8-yeG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUN-dU-U7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
