@@ -6,16 +6,16 @@
 //  Copyright © 2016 Cloud On Mobile. All rights reserved.
 //
 
-import AWSCore
-import AWSCognito
-import AWSDynamoDB
+//import AWSCore
+//import AWSCognito
+//import AWSDynamoDB
 
 
 
 
 protocol DataOperations {
     
-    func addNewRecord(_ item: PostEntryDB)
+    //func addNewRecord(_ item: PostEntryDB)
     
     
 }
@@ -24,17 +24,17 @@ protocol DataOperations {
 
 
 class PostDataManager: NSObject, DataOperations {
-
+/*
     var dynamodbMapper: AWSDynamoDBObjectMapper?
     
     init?(mapper: AWSDynamoDBObjectMapper = AWSDynamoDBObjectMapper.default()) {
         self.dynamodbMapper = mapper
     }
-   
+   */
 }
 
 extension PostDataManager {
-    
+    /*
     func addNewRecord(_ item: PostEntryDB) {
         
         dynamodbMapper?.save(item).continue({ (task) -> Any? in
@@ -53,6 +53,7 @@ extension PostDataManager {
             
         })
     }
+ */
 }
 
 

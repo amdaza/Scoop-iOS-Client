@@ -7,14 +7,14 @@
 //
 
 import Foundation
-import AWSCognito
-import AWSCore
+//import AWSCognito
+//import AWSCore
 
 
 
 protocol LoggedInteractorInput {
     
-    func doLoginInAWS(withCredential credential: String)
+    func doLoginInAzure(withCredential credential: String)
 //    func removeRecord(item: PostEntry)
     
 //    func readAllRecords()
@@ -33,12 +33,12 @@ protocol LoggedInteractorOutput {
 class LoggedInteractor: NSObject, LoggedInteractorInput {
 
     var interactorOutput: LoggedInteractorOutput?
-    var credentialsProvider: AWSCognitoCredentialsProvider?
+    //var credentialsProvider: AWSCognitoCredentialsProvider?
 
     
-    func startWithTwitterCredentials(_ credentials: CustomAWSProvider) {
+    //func startWithTwitterCredentials(_ credentials: CustomAWSProvider) {
         
-        
+       /*
         credentialsProvider = AWSCognitoCredentialsProvider(regionType: .euWest1,
                                                             identityPoolId: "eu-west-1:8e482ce0-358e-4948-98ff-923d7289b8c1",
                                                             identityProviderManager: credentials)
@@ -73,11 +73,12 @@ class LoggedInteractor: NSObject, LoggedInteractorInput {
             })
         })
         
-        
-    }
+        */
+  //  }
     
     
     func conginitoSyncUserData() {
+        /*
         let syncClient = AWSCognito.default()
         
         let dataSet = syncClient?.openOrCreateDataset("twitterUser")
@@ -113,16 +114,18 @@ class LoggedInteractor: NSObject, LoggedInteractorInput {
             
         })
         
-        
+        */
     }
 
 }
 
+
 extension LoggedInteractor {
-    func doLoginInAWS(withCredential credential: String) {
-        
+    func doLoginInAzure(withCredential credential: String) {
+   /*
         let customProvider = CustomAWSProvider(tokens: [AWSIdentityProviderTwitter : credential])
         self.startWithTwitterCredentials(customProvider)
+ */
     }
 }
 

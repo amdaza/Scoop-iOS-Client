@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AWSMobileAnalytics
+//import AWSMobileAnalytics
 
 typealias EventAttributes = (key: String, customValue: String)
 typealias MetricAttribute = (key: String, valor: Double)
@@ -15,7 +15,7 @@ typealias MetricAttribute = (key: String, valor: Double)
 
 class PrincipalViewController: UIViewController {
 
-    let mobileAnalytics = (UIApplication.shared.delegate as! AppDelegate).mobileAnalytics
+    //let mobileAnalytics = (UIApplication.shared.delegate as! AppDelegate).mobileAnalytics
     
     var startTime: Date?
     
@@ -69,7 +69,8 @@ class PrincipalViewController: UIViewController {
     
     func addEvent(_ eventType: String, attribute: EventAttributes, metrics: MetricAttribute? = nil)  {
         
-        let evento = mobileAnalytics?.eventClient.createEvent(withEventType: eventType)
+        /*
+        //let evento = mobileAnalytics?.eventClient.createEvent(withEventType: eventType)
         
         evento?.addAttribute(attribute.customValue, forKey: attribute.key)
         
@@ -79,7 +80,6 @@ class PrincipalViewController: UIViewController {
         }
         
         
-        
         mobileAnalytics?
             .eventClient
             .record(evento)
@@ -87,7 +87,7 @@ class PrincipalViewController: UIViewController {
         mobileAnalytics?
             .eventClient
         .submitEvents()
-        
+        */
     }
     
     

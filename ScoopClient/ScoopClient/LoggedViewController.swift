@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import TwitterKit
+//import TwitterKit
 
-import AWSMobileAnalytics
+//import AWSMobileAnalytics
 
 
 
@@ -62,6 +62,7 @@ class LoggedViewController: UITableViewController, LoggedInteractorOutput {
     
     
     func loginWithTwitter() {
+        /*
         Twitter.sharedInstance().logIn(with: self) { (session, error) in
             if let _ = error {
                 print(error)
@@ -75,7 +76,7 @@ class LoggedViewController: UITableViewController, LoggedInteractorOutput {
            
             
         }
-        
+        */
     }
     
     

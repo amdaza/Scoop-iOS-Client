@@ -8,14 +8,14 @@
 
 import UIKit
 
-import AWSCore
-import AWSCognito
-import AWSS3
+//import AWSCore
+//import AWSCognito
+//import AWSS3
 
 
 class NewPostViewController: UIViewController {
 
-    var s3Mgr: AWSS3TransferManager = AWSS3TransferManager.default()
+    //var s3Mgr: AWSS3TransferManager = AWSS3TransferManager.default()
     
     var userName: String?
     var userId: String?
@@ -40,7 +40,7 @@ class NewPostViewController: UIViewController {
     }
 
     func uploadBlob()  {
-        
+       /*
         let request = prepareRequest()
         
         s3Mgr.upload(request).continue ({ (task) -> Any? in
@@ -57,12 +57,12 @@ class NewPostViewController: UIViewController {
             return nil
         })
             
-        
+        */
         
     }
     
-    func prepareRequest() -> AWSS3TransferManagerUploadRequest{
-        
+   // func prepareRequest() -> AWSS3TransferManagerUploadRequest{
+       /*
         let request = AWSS3TransferManagerUploadRequest()
         
         request?.contentType = "image/jpg"
@@ -72,7 +72,8 @@ class NewPostViewController: UIViewController {
         
         
         return request!
-    }
+ */
+   // }
     
     
     
