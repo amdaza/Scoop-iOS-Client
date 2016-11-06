@@ -109,6 +109,7 @@ class PrincipalViewController: UIViewController {
                             
                         } else if user != nil {
                             
+                            self.saveAuthInfo(user: user!, withProvider: provider)
                             self.goToLoggedMode()
                         }
         }
@@ -121,6 +122,7 @@ class PrincipalViewController: UIViewController {
                                   forKey: provider + "userID")
         UserDefaults.standard.set(user.mobileServiceAuthenticationToken!,
                                   forKey: provider + "token")
+        
         UserDefaults.standard.synchronize()
     }
     
