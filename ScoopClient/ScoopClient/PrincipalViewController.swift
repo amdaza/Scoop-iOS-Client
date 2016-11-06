@@ -17,6 +17,10 @@ class PrincipalViewController: UIViewController {
 
     //let mobileAnalytics = (UIApplication.shared.delegate as! AppDelegate).mobileAnalytics
     
+    var client: MSClient = MSClient(applicationURL: URL(string: "http://amdcboot3labs-mbaas.azurewebsites.net")!)
+    
+    var model: [AuthorRecord]? = []
+    
     var startTime: Date?
     
     override func viewDidLoad() {
@@ -50,10 +54,23 @@ class PrincipalViewController: UIViewController {
         
         addEvent("Click_User_Logged", attribute: ("ClientType", "Twitter"))
         
-        let storyBoardL = UIStoryboard(name: "Logged", bundle: Bundle.main)
-        let vc = storyBoardL.instantiateViewController(withIdentifier: "loggedScene")
+        client.login(withProvider: "twitter", parameters: nil, controller: self, animated: true) { (user, error) in
+            
+            if error != nil {
+                print("ERROR ", error)
+                return
+                
+            } else if user != nil {
+                print(user)
+                print(self.client.currentUser)
+                
+                let storyBoardL = UIStoryboard(name: "Logged", bundle: Bundle.main)
+                let vc = storyBoardL.instantiateViewController(withIdentifier: "loggedScene")
+                
+                self.present(vc, animated: true, completion: nil)
+            }
+        }
         
-        present(vc, animated: true, completion: nil)
 
     }
 
@@ -89,23 +106,6 @@ class PrincipalViewController: UIViewController {
         .submitEvents()
         */
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     /*

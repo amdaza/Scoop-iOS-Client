@@ -59,7 +59,6 @@ class ScoopsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         
-        //insertNewAuthor(name: "Carlos", lastname: "Ruiz Zafón")
         
         readAllItemsInTable()
         

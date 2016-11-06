@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H2t-rV-VQt">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H2t-rV-VQt">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -10,7 +10,7 @@
         <!--Principal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PrincipalViewController" customModule="PracticaAWS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PrincipalViewController" customModule="ScoopClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,14 +19,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqP-fs-Wc4">
-                                <state key="normal" title="Usuario logado"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqP-fs-Wc4">
+                                <frame key="frameInset" minX="128" minY="174" width="126" height="30"/>
+                                <state key="normal" title="Login with Twitter"/>
                                 <connections>
                                     <action selector="userLoggedAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yKF-L4-ZrP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2q-mk-LKC">
-                                <state key="normal" title="Usuario Anónimo"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcc-62-dbT">
+                                <frame key="frameInset" minX="115" minY="114" width="145" height="30"/>
+                                <state key="normal" title="Login with Facebook"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2q-mk-LKC">
+                                <frame key="frameInset" minX="121" minY="232" width="133" height="30"/>
+                                <state key="normal" title="Anonymous access"/>
                                 <connections>
                                     <action selector="userAnonymousAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3HI-FM-hck"/>
                                 </connections>
@@ -36,6 +42,9 @@
                         <constraints>
                             <constraint firstItem="GqP-fs-Wc4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="120" id="6bd-aO-akE"/>
                             <constraint firstItem="GqP-fs-Wc4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="113" id="DOp-Wg-zUF"/>
+                            <constraint firstItem="zcc-62-dbT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="99" id="UdA-sg-wFX"/>
+                            <constraint firstItem="GqP-fs-Wc4" firstAttribute="top" secondItem="zcc-62-dbT" secondAttribute="bottom" constant="30" id="Zvj-RW-pu7"/>
+                            <constraint firstItem="zcc-62-dbT" firstAttribute="centerX" secondItem="u2q-mk-LKC" secondAttribute="centerX" id="Zy5-zc-O9L"/>
                             <constraint firstItem="u2q-mk-LKC" firstAttribute="centerX" secondItem="GqP-fs-Wc4" secondAttribute="centerX" id="fPo-YJ-ZBT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GqP-fs-Wc4" secondAttribute="trailing" constant="120" id="wn7-sa-5vi"/>
                             <constraint firstItem="u2q-mk-LKC" firstAttribute="top" secondItem="GqP-fs-Wc4" secondAttribute="bottom" constant="20" id="xEO-e4-616"/>
