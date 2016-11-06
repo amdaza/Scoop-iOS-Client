@@ -12,12 +12,13 @@ import UIKit
 typealias EventAttributes = (key: String, customValue: String)
 typealias MetricAttribute = (key: String, valor: Double)
 
+let azureURL = "http://amdcboot3labs-mbaas.azurewebsites.net"
 
 class PrincipalViewController: UIViewController {
 
     //let mobileAnalytics = (UIApplication.shared.delegate as! AppDelegate).mobileAnalytics
     
-    var client: MSClient = MSClient(applicationURL: URL(string: "http://amdcboot3labs-mbaas.azurewebsites.net")!)
+    var client: MSClient = MSClient(applicationURL: URL(string: azureURL)!)
     
     var model: [AuthorRecord]? = []
     
@@ -52,27 +53,28 @@ class PrincipalViewController: UIViewController {
     
     @IBAction func userLoggedAction(_ sender: AnyObject) {
         
-        addEvent("Click_User_Logged", attribute: ("ClientType", "Twitter"))
+        let provider = "twitter"
         
-        client.login(withProvider: "twitter", parameters: nil, controller: self, animated: true) { (user, error) in
-            
-            if error != nil {
-                print("ERROR ", error)
-                return
-                
-            } else if user != nil {
-                print(user)
-                print(self.client.currentUser)
-                
-                let storyBoardL = UIStoryboard(name: "Logged", bundle: Bundle.main)
-                let vc = storyBoardL.instantiateViewController(withIdentifier: "loggedScene")
-                
-                self.present(vc, animated: true, completion: nil)
-            }
-        }
-        
+        tryLogin(withProvider: provider)
 
     }
+    
+    func tryLogin (withProvider provider: String) {
+        
+        addEvent("Click_User_Logged", attribute: ("ClientType", provider))
+        
+        
+        loadAuthInfo(withProvider: provider)
+        
+        if let _ = client.currentUser {
+            
+            goToLoggedMode()
+        } else {
+            
+            clientLogin(withProvider: provider)
+        }
+    }
+    
 
     @IBAction func userAnonymousAction(_ sender: AnyObject) {
         
@@ -81,6 +83,65 @@ class PrincipalViewController: UIViewController {
         let vc = storyBoardA.instantiateViewController(withIdentifier: "anonymousScene")
         
         present(vc, animated: true, completion: nil)
+    }
+    
+    func goToLoggedMode() {
+        
+        let storyBoardL = UIStoryboard(name: "Logged", bundle: Bundle.main)
+        let vc = storyBoardL.instantiateViewController(withIdentifier: "loggedScene")
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
+    // MARK: - Authorization management
+    
+    func clientLogin(withProvider provider: String) {
+        
+        client.login(withProvider: provider,
+                     parameters: nil,
+                     controller: self,
+                     animated: true) { (user, error) in
+                        
+                        if error != nil {
+                            print("ERROR ", error)
+                            return
+                            
+                        } else if user != nil {
+                            
+                            self.goToLoggedMode()
+                        }
+        }
+
+    }
+    
+    func saveAuthInfo(user: MSUser, withProvider provider: String) {
+        
+        UserDefaults.standard.set(user.userId!,
+                                  forKey: provider + "userID")
+        UserDefaults.standard.set(user.mobileServiceAuthenticationToken!,
+                                  forKey: provider + "token")
+        UserDefaults.standard.synchronize()
+    }
+    
+    func loadAuthInfo(withProvider provider: String) {
+        
+        let userId = UserDefaults.standard
+            .object(forKey: provider +  "userId") as? String
+        let userToken = UserDefaults.standard
+            .object(forKey: provider +  "userToken") as? String
+        
+        if userId != nil {
+            self.client.currentUser = MSUser(userId: userId)
+            self.client.currentUser?.mobileServiceAuthenticationToken = userToken
+        }
+        
+    }
+    
+    func deleteAuthInfo() {
+        
+        UserDefaults.standard.removeObject(forKey: "userId")
+        UserDefaults.standard.removeObject(forKey: "userToken")
     }
     
     

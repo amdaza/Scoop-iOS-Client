@@ -7,9 +7,6 @@
 //
 
 import Foundation
-//import AWSCognito
-//import AWSCore
-
 
 
 protocol LoggedInteractorInput {
