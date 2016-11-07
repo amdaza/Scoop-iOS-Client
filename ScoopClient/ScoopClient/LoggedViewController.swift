@@ -10,17 +10,19 @@ import UIKit
 //import TwitterKit
 
 
-class LoggedViewController: UITableViewController/*, LoggedInteractorOutput */{
+class LoggedViewController: UITableViewController{
     
     var model: [ScoopRecord]? = []
-    var client: MSClient = MSClient(applicationURL: URL(string: azureURL)!)
+    var client: MSClient?
     
     @IBAction func logoutAction(_ sender: AnyObject) {
         
         deleteAuthInfo()
         
         let storyBoardL = UIStoryboard(name: "Anonymous", bundle: Bundle.main)
-        let vc = storyBoardL.instantiateViewController(withIdentifier: "anonymousScene")
+        let vc = storyBoardL.instantiateViewController(withIdentifier: "anonymousScene") as! NewPostViewController
+        
+        vc.client = self.client
         
         self.present(vc, animated: true, completion: nil)
     }
@@ -60,9 +62,9 @@ class LoggedViewController: UITableViewController/*, LoggedInteractorOutput */{
     
     func deleteAuthorRecord(item: ScoopRecord) {
         
-        let tableMS = client.table(withName: "Scoops")
+        let tableMS = client?.table(withName: "Scoops")
         
-        tableMS.delete(item) { (result, error) in
+        tableMS?.delete(item) { (result, error) in
             
             if let _ = error {
                 print(error)
@@ -75,9 +77,9 @@ class LoggedViewController: UITableViewController/*, LoggedInteractorOutput */{
     }
     
     func readAllItemsInTable() {
-        let tableMS = client.table(withName: "Scoops")
+        let tableMS = client?.table(withName: "Scoops")
         
-        tableMS.read { (results, error) in
+        tableMS?.read { (results, error) in
             if let _ = error {
                 print(error)
                 return
@@ -158,6 +160,16 @@ class LoggedViewController: UITableViewController/*, LoggedInteractorOutput */{
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Create a new variable to store the instance of PlayerTableViewController
+        if let destinationVC = segue.destination as? NewPostViewController{
+            destinationVC.client = self.client
+        }
+        
+    }
+
 
 }
 /*

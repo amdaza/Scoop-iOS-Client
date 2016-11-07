@@ -19,13 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqP-fs-Wc4">
-                                <frame key="frameInset" minX="128" minY="174" width="126" height="30"/>
-                                <state key="normal" title="Login with Twitter"/>
-                                <connections>
-                                    <action selector="userLoggedAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yKF-L4-ZrP"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcc-62-dbT">
                                 <frame key="frameInset" minX="115" minY="114" width="145" height="30"/>
                                 <state key="normal" title="Login with Facebook"/>
@@ -35,6 +28,13 @@
                                 <state key="normal" title="Anonymous access"/>
                                 <connections>
                                     <action selector="userAnonymousAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3HI-FM-hck"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqP-fs-Wc4">
+                                <frame key="frameInset" minX="107" minY="176" width="160" height="30"/>
+                                <state key="normal" title="Login with Twitter"/>
+                                <connections>
+                                    <action selector="userLoggedAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yKF-L4-ZrP"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -11,7 +11,7 @@ import UIKit
 
 class ScoopsTableViewController: UITableViewController {
     
-    var client: MSClient = MSClient(applicationURL: URL(string: azureURL)!)
+    var client: MSClient?
     
     var model: [AuthorRecord]? = []
     
@@ -66,9 +66,9 @@ class ScoopsTableViewController: UITableViewController {
     // MARK: - CRUD Authors table
     
     func insertNewAuthor(name: String, lastname: String) {
-        let tableMS = client.table(withName: "Authors")
+        let tableMS = client?.table(withName: "Authors")
         
-        tableMS.insert(["name": name, "lastname": lastname]) { (result, error) in
+        tableMS?.insert(["name": name, "lastname": lastname]) { (result, error) in
             
             if let _ = error {
                 print(error)
@@ -82,9 +82,9 @@ class ScoopsTableViewController: UITableViewController {
     
     func deleteAuthorRecord(item: AuthorRecord) {
         
-        let tableMS = client.table(withName: "Authors")
+        let tableMS = client?.table(withName: "Authors")
         
-        tableMS.delete(item) { (result, error) in
+        tableMS?.delete(item) { (result, error) in
             
             if let _ = error {
                 print(error)
@@ -97,9 +97,9 @@ class ScoopsTableViewController: UITableViewController {
     }
     
     func readAllItemsInTable() {
-        let tableMS = client.table(withName: "Authors")
+        let tableMS = client?.table(withName: "Authors")
         
-        tableMS.read { (results, error) in
+        tableMS?.read { (results, error) in
             if let _ = error {
                 print(error)
                 return

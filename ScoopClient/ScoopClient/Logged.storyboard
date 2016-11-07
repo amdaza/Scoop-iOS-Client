@@ -10,7 +10,7 @@
         <!--Logged View Controller-->
         <scene sceneID="Hxt-lz-1j6">
             <objects>
-                <tableViewController id="FKY-1a-SSe" customClass="LoggedViewController" customModule="ScoopClient" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="tableLoggedScene" id="FKY-1a-SSe" customClass="LoggedViewController" customModule="ScoopClient" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3zP-76-7Vd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DNJ-Ti-EfQ" id="xcn-KM-kbX">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

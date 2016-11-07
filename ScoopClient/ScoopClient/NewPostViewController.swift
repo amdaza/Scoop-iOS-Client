@@ -11,7 +11,7 @@ import UIKit
 
 class NewPostViewController: UIViewController {
 
-    var client: MSClient = MSClient(applicationURL: URL(string: azureURL)!)
+    var client: MSClient?
     
     @IBOutlet weak var postTxt: UITextField!
     @IBOutlet weak var titleTxt: UITextField!
@@ -61,9 +61,9 @@ class NewPostViewController: UIViewController {
                         published: Bool,
                         authorId: String) {
         
-        let tableMS = client.table(withName: "Scoops")
+        let tableMS = client?.table(withName: "Scoops")
         
-        tableMS.insert(["title": title,
+        tableMS?.insert(["title": title,
                         "content": content,
                         "published": published,
                         "authorId": authorId]) { (result, error) in

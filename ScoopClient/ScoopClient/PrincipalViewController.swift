@@ -83,7 +83,9 @@ class PrincipalViewController: UIViewController {
         
         addEvent("Click_User_Anonymous", attribute: ("ClientType", "Anomymous"))
         let storyBoardA = UIStoryboard(name: "Anonymous", bundle: Bundle.main)
-        let vc = storyBoardA.instantiateViewController(withIdentifier: "anonymousScene")
+        let vc = storyBoardA.instantiateViewController(withIdentifier: "anonymousScene") as! ScoopsTableViewController
+        
+        vc.client = self.client
         
         present(vc, animated: true, completion: nil)
     }
@@ -91,9 +93,19 @@ class PrincipalViewController: UIViewController {
     func goToLoggedMode() {
         
         let storyBoardL = UIStoryboard(name: "Logged", bundle: Bundle.main)
-        let vc = storyBoardL.instantiateViewController(withIdentifier: "loggedScene")
+        //let vc =
         
-        self.present(vc, animated: true, completion: nil)
+        if let navController = storyBoardL.instantiateViewController(withIdentifier: "loggedScene") as? UINavigationController {
+       
+            if let chidVC = navController.topViewController as? LoggedViewController {
+                //TODO: access here chid VC  like childVC.yourTableViewArray = localArrayValue
+                chidVC.client = client
+                
+            }
+            
+            self.present(navController, animated: true, completion: nil)
+        }
+        
     }
     
     
