@@ -62,6 +62,13 @@ class PrincipalViewController: UIViewController {
 
     }
     
+    @IBAction func userLoginActionFacebook(_ sender: AnyObject) {
+        
+        let provider = "facebook"
+        
+        tryLogin(withProvider: provider)
+    }
+    
     func tryLogin (withProvider provider: String) {
         
         addEvent("Click_User_Logged", attribute: ("ClientType", provider))
