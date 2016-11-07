@@ -15,6 +15,22 @@ class LoggedViewController: UITableViewController/*, LoggedInteractorOutput */{
     var model: [ScoopRecord]? = []
     var client: MSClient = MSClient(applicationURL: URL(string: azureURL)!)
     
+    @IBAction func logoutAction(_ sender: AnyObject) {
+        
+        deleteAuthInfo()
+        
+        let storyBoardL = UIStoryboard(name: "Anonymous", bundle: Bundle.main)
+        let vc = storyBoardL.instantiateViewController(withIdentifier: "anonymousScene")
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
+    func deleteAuthInfo() {
+        
+        UserDefaults.standard.removeObject(forKey: "userId")
+        UserDefaults.standard.removeObject(forKey: "userToken")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

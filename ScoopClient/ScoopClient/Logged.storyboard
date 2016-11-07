@@ -33,7 +33,7 @@
                     <toolbarItems>
                         <barButtonItem title="Logout" id="dDJ-D7-3mX">
                             <connections>
-                                <action selector="loginWithTwitterAction:" destination="FKY-1a-SSe" id="Jc2-Id-YKN"/>
+                                <action selector="logoutAction:" destination="FKY-1a-SSe" id="uMW-MB-fdJ"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>

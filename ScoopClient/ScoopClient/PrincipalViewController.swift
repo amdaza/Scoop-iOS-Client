@@ -141,12 +141,6 @@ class PrincipalViewController: UIViewController {
         
     }
     
-    func deleteAuthInfo() {
-        
-        UserDefaults.standard.removeObject(forKey: "userId")
-        UserDefaults.standard.removeObject(forKey: "userToken")
-    }
-    
     
     func addEvent(_ eventType: String, attribute: EventAttributes, metrics: MetricAttribute? = nil)  {
         
