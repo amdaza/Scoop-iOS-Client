@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Authors-->
         <scene sceneID="JfZ-9Q-XsT">
             <objects>
                 <tableViewController storyboardIdentifier="anonymousTableScene" id="HvR-dc-x2a" customClass="ScoopsTableViewController" customModule="ScoopClient" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                             <outlet property="delegate" destination="HvR-dc-x2a" id="3bE-D3-cEv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="52c-jS-ll9" userLabel="Navigation Item"/>
+                    <navigationItem key="navigationItem" title="Authors" id="52c-jS-ll9" userLabel="Navigation Item"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUN-dU-U7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
