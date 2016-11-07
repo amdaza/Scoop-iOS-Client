@@ -20,11 +20,16 @@ class LoggedViewController: UITableViewController{
         deleteAuthInfo()
         
         let storyBoardL = UIStoryboard(name: "Anonymous", bundle: Bundle.main)
-        let vc = storyBoardL.instantiateViewController(withIdentifier: "anonymousScene") as! ScoopsTableViewController
         
-        vc.client = self.client
-        
-        self.present(vc, animated: true, completion: nil)
+        if let navController = storyBoardL.instantiateViewController(withIdentifier: "anonymousScene") as? UINavigationController {
+            
+            if let chidVC = navController.topViewController as? ScoopsTableViewController {
+                
+                chidVC.client = client
+            }
+            
+            self.present(navController, animated: true, completion: nil)
+        }
     }
     
     

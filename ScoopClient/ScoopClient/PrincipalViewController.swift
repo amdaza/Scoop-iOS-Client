@@ -87,9 +87,8 @@ class PrincipalViewController: UIViewController {
         if let navController = storyBoardA.instantiateViewController(withIdentifier: "anonymousScene") as? UINavigationController {
             
             if let chidVC = navController.topViewController as? ScoopsTableViewController {
-                //TODO: access here chid VC  like childVC.yourTableViewArray = localArrayValue
+
                 chidVC.client = client
-                
             }
             
             self.present(navController, animated: true, completion: nil)
@@ -104,9 +103,8 @@ class PrincipalViewController: UIViewController {
         if let navController = storyBoardL.instantiateViewController(withIdentifier: "loggedScene") as? UINavigationController {
        
             if let chidVC = navController.topViewController as? LoggedViewController {
-                //TODO: access here chid VC  like childVC.yourTableViewArray = localArrayValue
+
                 chidVC.client = client
-                
             }
             
             self.present(navController, animated: true, completion: nil)
