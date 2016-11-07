@@ -12,6 +12,9 @@ import UIKit
 typealias EventAttributes = (key: String, customValue: String)
 typealias MetricAttribute = (key: String, valor: Double)
 
+typealias AuthorRecord = Dictionary<String, AnyObject>
+typealias ScoopRecord = Dictionary<String, AnyObject>
+
 let azureURL = "http://amdcboot3labs-mbaas.azurewebsites.net"
 
 class PrincipalViewController: UIViewController {
@@ -64,9 +67,9 @@ class PrincipalViewController: UIViewController {
         addEvent("Click_User_Logged", attribute: ("ClientType", provider))
         
         
-        loadAuthInfo(withProvider: provider)
+        loadAuthInfo()
         
-        if let _ = client.currentUser {
+        if client.currentUser != nil {
             
             goToLoggedMode()
         } else {
@@ -109,29 +112,27 @@ class PrincipalViewController: UIViewController {
                             
                         } else if user != nil {
                             
-                            self.saveAuthInfo(user: user!, withProvider: provider)
+                            self.saveAuthInfo(user: user!)
                             self.goToLoggedMode()
                         }
         }
 
     }
     
-    func saveAuthInfo(user: MSUser, withProvider provider: String) {
+    func saveAuthInfo(user: MSUser) {
         
         UserDefaults.standard.set(user.userId!,
-                                  forKey: provider + "userID")
+                                  forKey: "userId")
         UserDefaults.standard.set(user.mobileServiceAuthenticationToken!,
-                                  forKey: provider + "token")
+                                  forKey: "userToken")
         
         UserDefaults.standard.synchronize()
     }
     
-    func loadAuthInfo(withProvider provider: String) {
+    func loadAuthInfo() {
         
-        let userId = UserDefaults.standard
-            .object(forKey: provider +  "userId") as? String
-        let userToken = UserDefaults.standard
-            .object(forKey: provider +  "userToken") as? String
+        let userId = UserDefaults.standard.object(forKey: "userId") as? String
+        let userToken = UserDefaults.standard.object(forKey: "userToken") as? String
         
         if userId != nil {
             self.client.currentUser = MSUser(userId: userId)

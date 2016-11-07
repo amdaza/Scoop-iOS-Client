@@ -12,13 +12,9 @@ import UIKit
 
 class LoggedViewController: UITableViewController/*, LoggedInteractorOutput */{
     
-    //var model: [PostEntry] = []
-    var client: MSClient = MSClient(applicationURL: URL(string: "http://amdcboot3labs-mbaas.azurewebsites.net")!)
+    var model: [ScoopRecord]? = []
+    var client: MSClient = MSClient(applicationURL: URL(string: azureURL)!)
     
-    var model: [AuthorRecord]? = []
-    
-    
-    var interactorInput: LoggedInteractorInput?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,26 +39,12 @@ class LoggedViewController: UITableViewController/*, LoggedInteractorOutput */{
     }
     
     
-    // MARK: - CRUD Authors table
+    // MARK: - CRUD Scoops table
     
-    func insertNewAuthor(name: String, lastname: String) {
-        let tableMS = client.table(withName: "Authors")
-        
-        tableMS.insert(["name": name, "lastname": lastname]) { (result, error) in
-            
-            if let _ = error {
-                print(error)
-                return
-            }
-            
-            print(result)
-            
-        }
-    }
     
-    func deleteAuthorRecord(item: AuthorRecord) {
+    func deleteAuthorRecord(item: ScoopRecord) {
         
-        let tableMS = client.table(withName: "Authors")
+        let tableMS = client.table(withName: "Scoops")
         
         tableMS.delete(item) { (result, error) in
             
@@ -77,8 +59,7 @@ class LoggedViewController: UITableViewController/*, LoggedInteractorOutput */{
     }
     
     func readAllItemsInTable() {
-        let tableMS = client.table(withName: "Authors")
-        //  let predicate = NSPredicate(format: "name = 'Juan Martin'")
+        let tableMS = client.table(withName: "Scoops")
         
         tableMS.read { (results, error) in
             if let _ = error {
@@ -123,7 +104,7 @@ class LoggedViewController: UITableViewController/*, LoggedInteractorOutput */{
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = model?[indexPath.row]
         
-        performSegue(withIdentifier: "detailAuthor", sender: item)
+        //performSegue(withIdentifier: "detailAuthor", sender: item)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -137,7 +118,7 @@ class LoggedViewController: UITableViewController/*, LoggedInteractorOutput */{
         // Configure the cell...
         let item = model?[indexPath.row]
         
-        cell.textLabel?.text = item?["name"] as! String?
+        cell.textLabel?.text = item?["title"] as! String?
         
         return cell
     }

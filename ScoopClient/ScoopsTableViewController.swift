@@ -8,16 +8,16 @@
 
 import UIKit
 
-typealias AuthorRecord = Dictionary<String, AnyObject>
 
 class ScoopsTableViewController: UITableViewController {
     
     
     @IBAction func customAction(_ sender: AnyObject) {
+     // Logout??
     }
         
     
-    var client: MSClient = MSClient(applicationURL: URL(string: "http://amdcboot3labs-mbaas.azurewebsites.net")!)
+    var client: MSClient = MSClient(applicationURL: URL(string: azureURL)!)
     
     var model: [AuthorRecord]? = []
     
@@ -104,7 +104,6 @@ class ScoopsTableViewController: UITableViewController {
     
     func readAllItemsInTable() {
         let tableMS = client.table(withName: "Authors")
-        //  let predicate = NSPredicate(format: "name = 'Juan Martin'")
         
         tableMS.read { (results, error) in
             if let _ = error {

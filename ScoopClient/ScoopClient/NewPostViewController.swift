@@ -8,21 +8,15 @@
 
 import UIKit
 
-//import AWSCore
-//import AWSCognito
-//import AWSS3
-
 
 class NewPostViewController: UIViewController {
 
-    //var s3Mgr: AWSS3TransferManager = AWSS3TransferManager.default()
-    
-    var userName: String?
-    var userId: String?
+    var client: MSClient = MSClient(applicationURL: URL(string: azureURL)!)
     
     @IBOutlet weak var postTxt: UITextField!
     @IBOutlet weak var titleTxt: UITextField!
-    
+    @IBOutlet weak var authorName: UITextField!
+    @IBOutlet weak var authorLastname: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,44 +30,53 @@ class NewPostViewController: UIViewController {
     }
     
     @IBAction func uploadAction(_ sender: AnyObject) {
-        uploadBlob()
+        
+        if let title = titleTxt.text,
+            let content = postTxt.text,
+            let userId = UserDefaults.standard
+                .object(forKey: "userId") as? String {
+            
+            insertNewScoop(title: title,
+                       content: content,
+                       published: true,
+                       authorId: userId)
+        }
+       
+        //uploadAuthor()
+        
+        let storyBoardL = UIStoryboard(name: "Logged", bundle: Bundle.main)
+        let vc = storyBoardL.instantiateViewController(withIdentifier: "loggedScene")
+        
+        self.present(vc, animated: true, completion: nil)
     }
 
-    func uploadBlob()  {
-       /*
-        let request = prepareRequest()
-        
-        s3Mgr.upload(request).continue ({ (task) -> Any? in
-            
-            if let _ = task.error {
-                
-                print(task.error)
-            }
-            
-            if let _ = task.result {
-                let blob = task.result as? AWSS3TransferManagerUploadOutput
-                print(blob?.eTag)
-            }
-            return nil
-        })
-            
-        */
+
+    
+    func uploadAuthor() {
         
     }
     
-   // func prepareRequest() -> AWSS3TransferManagerUploadRequest{
-       /*
-        let request = AWSS3TransferManagerUploadRequest()
+    func insertNewScoop(title: String,
+                        content: String,
+                        published: Bool,
+                        authorId: String) {
         
-        request?.contentType = "image/jpg"
-        request?.key = UUID().uuidString + ".jpg"
-        request?.bucket = "practicaawsalumnos"
-        request?.body =  Bundle.main.url(forResource: "winter-is-coming", withExtension: "jpg")
+        let tableMS = client.table(withName: "Scoops")
         
-        
-        return request!
- */
-   // }
+        tableMS.insert(["title": title,
+                        "content": content,
+                        "published": published,
+                        "authorId": authorId]) { (result, error) in
+            
+            if let _ = error {
+                print(error)
+                return
+            }
+            
+            print(result)
+            
+        }
+    }
     
     
     

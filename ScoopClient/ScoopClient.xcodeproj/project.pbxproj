@@ -12,13 +12,9 @@
 		1C139AD21DC687550031A24F /* Anonymous.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C139AD01DC687550031A24F /* Anonymous.storyboard */; };
 		1C270B191DCE26C400E0E534 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C270B171DCE26C400E0E534 /* Main.storyboard */; };
 		1C270B1A1DCE26C400E0E534 /* PrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C270B181DCE26C400E0E534 /* PrincipalViewController.swift */; };
-		1C270B211DCE2B7800E0E534 /* LoggedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C270B1C1DCE2B7800E0E534 /* LoggedInteractor.swift */; };
-		1C270B221DCE2B7800E0E534 /* PostsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C270B1D1DCE2B7800E0E534 /* PostsInteractor.swift */; };
 		1C270B231DCE2B7800E0E534 /* Logged.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C270B1E1DCE2B7800E0E534 /* Logged.storyboard */; };
 		1C270B241DCE2B7800E0E534 /* LoggedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C270B1F1DCE2B7800E0E534 /* LoggedViewController.swift */; };
 		1C270B251DCE2B7800E0E534 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C270B201DCE2B7800E0E534 /* NewPostViewController.swift */; };
-		1C270B291DCE2BC500E0E534 /* PostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C270B281DCE2BC500E0E534 /* PostDataManager.swift */; };
-		1C270B2C1DCE2C5B00E0E534 /* PostEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C270B2B1DCE2C5B00E0E534 /* PostEntry.swift */; };
 		1C2E0D7E1DC66744000A3C59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0D7D1DC66744000A3C59 /* AppDelegate.swift */; };
 		1C2E0D861DC66744000A3C59 /* ScoopClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0D841DC66744000A3C59 /* ScoopClient.xcdatamodeld */; };
 		1C2E0D881DC66744000A3C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2E0D871DC66744000A3C59 /* Assets.xcassets */; };
@@ -52,13 +48,9 @@
 		1C139AD11DC687550031A24F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Anonymous.storyboard; sourceTree = "<group>"; };
 		1C270B171DCE26C400E0E534 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1C270B181DCE26C400E0E534 /* PrincipalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalViewController.swift; sourceTree = "<group>"; };
-		1C270B1C1DCE2B7800E0E534 /* LoggedInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInteractor.swift; sourceTree = "<group>"; };
-		1C270B1D1DCE2B7800E0E534 /* PostsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsInteractor.swift; sourceTree = "<group>"; };
 		1C270B1E1DCE2B7800E0E534 /* Logged.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Logged.storyboard; sourceTree = "<group>"; };
 		1C270B1F1DCE2B7800E0E534 /* LoggedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedViewController.swift; sourceTree = "<group>"; };
 		1C270B201DCE2B7800E0E534 /* NewPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
-		1C270B281DCE2BC500E0E534 /* PostDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDataManager.swift; sourceTree = "<group>"; };
-		1C270B2B1DCE2C5B00E0E534 /* PostEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostEntry.swift; sourceTree = "<group>"; };
 		1C2E0D7A1DC66744000A3C59 /* ScoopClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoopClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2E0D7D1DC66744000A3C59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C2E0D851DC66744000A3C59 /* ScoopClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScoopClient.xcdatamodel; sourceTree = "<group>"; };
@@ -122,39 +114,11 @@
 		1C270B1B1DCE2B6300E0E534 /* Logged */ = {
 			isa = PBXGroup;
 			children = (
-				1C270B271DCE2B9800E0E534 /* Managers */,
-				1C270B261DCE2B8C00E0E534 /* Interactors */,
 				1C270B1E1DCE2B7800E0E534 /* Logged.storyboard */,
 				1C270B1F1DCE2B7800E0E534 /* LoggedViewController.swift */,
 				1C270B201DCE2B7800E0E534 /* NewPostViewController.swift */,
 			);
 			name = Logged;
-			sourceTree = "<group>";
-		};
-		1C270B261DCE2B8C00E0E534 /* Interactors */ = {
-			isa = PBXGroup;
-			children = (
-				1C270B1C1DCE2B7800E0E534 /* LoggedInteractor.swift */,
-				1C270B1D1DCE2B7800E0E534 /* PostsInteractor.swift */,
-			);
-			name = Interactors;
-			sourceTree = "<group>";
-		};
-		1C270B271DCE2B9800E0E534 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				1C270B2A1DCE2BDB00E0E534 /* Models */,
-				1C270B281DCE2BC500E0E534 /* PostDataManager.swift */,
-			);
-			name = Managers;
-			sourceTree = "<group>";
-		};
-		1C270B2A1DCE2BDB00E0E534 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				1C270B2B1DCE2C5B00E0E534 /* PostEntry.swift */,
-			);
-			name = Models;
 			sourceTree = "<group>";
 		};
 		1C2E0D711DC66744000A3C59 = {
@@ -357,15 +321,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C270B221DCE2B7800E0E534 /* PostsInteractor.swift in Sources */,
 				1C2E0DB11DC67660000A3C59 /* ScoopsTableViewController.swift in Sources */,
-				1C270B2C1DCE2C5B00E0E534 /* PostEntry.swift in Sources */,
-				1C270B211DCE2B7800E0E534 /* LoggedInteractor.swift in Sources */,
 				1C270B1A1DCE26C400E0E534 /* PrincipalViewController.swift in Sources */,
 				1C2E0D861DC66744000A3C59 /* ScoopClient.xcdatamodeld in Sources */,
 				1C270B251DCE2B7800E0E534 /* NewPostViewController.swift in Sources */,
 				1C2E0D7E1DC66744000A3C59 /* AppDelegate.swift in Sources */,
-				1C270B291DCE2BC500E0E534 /* PostDataManager.swift in Sources */,
 				1C270B241DCE2B7800E0E534 /* LoggedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

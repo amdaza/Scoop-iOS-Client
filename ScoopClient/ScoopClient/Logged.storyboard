@@ -99,11 +99,13 @@
                     <toolbarItems>
                         <barButtonItem title="Upload" id="yEw-pE-Pcx">
                             <connections>
-                                <action selector="uploadAction:" destination="3EZ-21-ebQ" id="xmu-G5-hMY"/>
+                                <action selector="uploadAction:" destination="3EZ-21-ebQ" id="4FZ-en-g1E"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
                     <connections>
+                        <outlet property="authorLastname" destination="R6O-tV-ZIC" id="Th9-U7-SzA"/>
+                        <outlet property="authorName" destination="L2g-yd-fb1" id="P2V-cy-GlC"/>
                         <outlet property="postTxt" destination="EsM-yU-aWb" id="Vt8-hK-PJt"/>
                         <outlet property="titleTxt" destination="nQy-Ap-4UG" id="RJO-8s-b7g"/>
                     </connections>
