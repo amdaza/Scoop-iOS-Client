@@ -20,7 +20,7 @@ class LoggedViewController: UITableViewController{
         deleteAuthInfo()
         
         let storyBoardL = UIStoryboard(name: "Anonymous", bundle: Bundle.main)
-        let vc = storyBoardL.instantiateViewController(withIdentifier: "anonymousScene") as! NewPostViewController
+        let vc = storyBoardL.instantiateViewController(withIdentifier: "anonymousScene") as! ScoopsTableViewController
         
         vc.client = self.client
         

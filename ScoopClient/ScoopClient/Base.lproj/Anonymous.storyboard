@@ -9,7 +9,7 @@
         <!--Title-->
         <scene sceneID="JfZ-9Q-XsT">
             <objects>
-                <tableViewController storyboardIdentifier="anonymousScene" id="HvR-dc-x2a" customClass="ScoopsTableViewController" customModule="ScoopClient" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="anonymousTableScene" id="HvR-dc-x2a" customClass="ScoopsTableViewController" customModule="ScoopClient" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OUc-Mm-y05">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
         <!--Navigation Controller-->
         <scene sceneID="dHy-Dg-TKb">
             <objects>
-                <navigationController id="UAk-BI-ze0" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="anonymousScene" id="UAk-BI-ze0" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cpa-fI-uO0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
