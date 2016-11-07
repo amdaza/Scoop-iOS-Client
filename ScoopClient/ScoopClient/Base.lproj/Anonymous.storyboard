@@ -29,13 +29,7 @@
                             <outlet property="delegate" destination="HvR-dc-x2a" id="3bE-D3-cEv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="52c-jS-ll9" userLabel="Navigation Item">
-                        <barButtonItem key="rightBarButtonItem" title="Login" id="FY8-dR-Zlm">
-                            <connections>
-                                <action selector="customAction:" destination="HvR-dc-x2a" id="eYP-B8-yeG"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="52c-jS-ll9" userLabel="Navigation Item"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUN-dU-U7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

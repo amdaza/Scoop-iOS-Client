@@ -11,12 +11,6 @@ import UIKit
 
 class ScoopsTableViewController: UITableViewController {
     
-    
-    @IBAction func customAction(_ sender: AnyObject) {
-     // Logout??
-    }
-        
-    
     var client: MSClient = MSClient(applicationURL: URL(string: azureURL)!)
     
     var model: [AuthorRecord]? = []

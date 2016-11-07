@@ -31,7 +31,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems>
-                        <barButtonItem title="Login" id="dDJ-D7-3mX">
+                        <barButtonItem title="Logout" id="dDJ-D7-3mX">
                             <connections>
                                 <action selector="loginWithTwitterAction:" destination="FKY-1a-SSe" id="Jc2-Id-YKN"/>
                             </connections>
