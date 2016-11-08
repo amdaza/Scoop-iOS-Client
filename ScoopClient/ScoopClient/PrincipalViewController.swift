@@ -15,7 +15,7 @@ typealias MetricAttribute = (key: String, valor: Double)
 typealias AuthorRecord = Dictionary<String, AnyObject>
 typealias ScoopRecord = Dictionary<String, AnyObject>
 
-let azureURL = "http://amdcboot3labs-mbaas.azurewebsites.net"
+let azureURL = "https://amdcboot3labs-mbaas.azurewebsites.net"
 
 class PrincipalViewController: UIViewController {
 
