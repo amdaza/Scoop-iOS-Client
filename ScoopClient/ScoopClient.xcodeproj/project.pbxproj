@@ -20,7 +20,7 @@
 		1C2E0D881DC66744000A3C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2E0D871DC66744000A3C59 /* Assets.xcassets */; };
 		1C2E0D961DC66744000A3C59 /* ScoopClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0D951DC66744000A3C59 /* ScoopClientTests.swift */; };
 		1C2E0DA11DC66744000A3C59 /* ScoopClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0DA01DC66744000A3C59 /* ScoopClientUITests.swift */; };
-		1C2E0DB11DC67660000A3C59 /* ScoopsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0DAF1DC67660000A3C59 /* ScoopsTableViewController.swift */; };
+		1C2E0DB11DC67660000A3C59 /* AnonymousTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0DAF1DC67660000A3C59 /* AnonymousTableViewController.swift */; };
 		1C2E0DBB1DC677D7000A3C59 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C2E0DBA1DC677D7000A3C59 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +62,7 @@
 		1C2E0D9C1DC66744000A3C59 /* ScoopClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoopClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2E0DA01DC66744000A3C59 /* ScoopClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoopClientUITests.swift; sourceTree = "<group>"; };
 		1C2E0DA21DC66744000A3C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C2E0DAF1DC67660000A3C59 /* ScoopsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScoopsTableViewController.swift; path = ../ScoopsTableViewController.swift; sourceTree = "<group>"; };
+		1C2E0DAF1DC67660000A3C59 /* AnonymousTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnonymousTableViewController.swift; path = ../AnonymousTableViewController.swift; sourceTree = "<group>"; };
 		1C2E0DBA1DC677D7000A3C59 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -97,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				1C139AD01DC687550031A24F /* Anonymous.storyboard */,
-				1C2E0DAF1DC67660000A3C59 /* ScoopsTableViewController.swift */,
+				1C2E0DAF1DC67660000A3C59 /* AnonymousTableViewController.swift */,
 			);
 			name = Anonymous;
 			sourceTree = "<group>";
@@ -146,6 +146,7 @@
 		1C2E0D7C1DC66744000A3C59 /* ScoopClient */ = {
 			isa = PBXGroup;
 			children = (
+				1C50306F1DD256D200E87A1C /* Shared */,
 				1C270B1B1DCE2B6300E0E534 /* Logged */,
 				1C270B161DCE26B100E0E534 /* Main */,
 				1C270B151DCE25F100E0E534 /* Anonymous */,
@@ -183,6 +184,13 @@
 				1C2E0DBA1DC677D7000A3C59 /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C50306F1DD256D200E87A1C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,7 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C2E0DB11DC67660000A3C59 /* ScoopsTableViewController.swift in Sources */,
+				1C2E0DB11DC67660000A3C59 /* AnonymousTableViewController.swift in Sources */,
 				1C270B1A1DCE26C400E0E534 /* PrincipalViewController.swift in Sources */,
 				1C2E0D861DC66744000A3C59 /* ScoopClient.xcdatamodeld in Sources */,
 				1C270B251DCE2B7800E0E534 /* NewPostViewController.swift in Sources */,

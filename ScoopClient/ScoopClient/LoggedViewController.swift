@@ -23,7 +23,7 @@ class LoggedViewController: UITableViewController{
         
         if let navController = storyBoardL.instantiateViewController(withIdentifier: "anonymousScene") as? UINavigationController {
             
-            if let chidVC = navController.topViewController as? ScoopsTableViewController {
+            if let chidVC = navController.topViewController as? AnonymousTableViewController {
                 
                 chidVC.client = client
             }

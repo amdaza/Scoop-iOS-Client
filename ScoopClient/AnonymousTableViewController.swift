@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ScoopsTableViewController: UITableViewController {
+class AnonymousTableViewController: UITableViewController {
     
     var client: MSClient?
     
