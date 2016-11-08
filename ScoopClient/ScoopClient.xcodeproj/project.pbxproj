@@ -22,6 +22,7 @@
 		1C2E0DA11DC66744000A3C59 /* ScoopClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0DA01DC66744000A3C59 /* ScoopClientUITests.swift */; };
 		1C2E0DB11DC67660000A3C59 /* AnonymousTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0DAF1DC67660000A3C59 /* AnonymousTableViewController.swift */; };
 		1C2E0DBB1DC677D7000A3C59 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C2E0DBA1DC677D7000A3C59 /* WebKit.framework */; };
+		1C5030711DD2582500E87A1C /* ScoopsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5030701DD2582500E87A1C /* ScoopsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		1C2E0DA21DC66744000A3C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C2E0DAF1DC67660000A3C59 /* AnonymousTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnonymousTableViewController.swift; path = ../AnonymousTableViewController.swift; sourceTree = "<group>"; };
 		1C2E0DBA1DC677D7000A3C59 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		1C5030701DD2582500E87A1C /* ScoopsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoopsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 		1C50306F1DD256D200E87A1C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				1C5030701DD2582500E87A1C /* ScoopsTableViewController.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				1C2E0D861DC66744000A3C59 /* ScoopClient.xcdatamodeld in Sources */,
 				1C270B251DCE2B7800E0E534 /* NewPostViewController.swift in Sources */,
 				1C2E0D7E1DC66744000A3C59 /* AppDelegate.swift in Sources */,
+				1C5030711DD2582500E87A1C /* ScoopsTableViewController.swift in Sources */,
 				1C270B241DCE2B7800E0E534 /* LoggedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

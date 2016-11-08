@@ -9,12 +9,8 @@
 import UIKit
 
 
-class AnonymousTableViewController: UITableViewController {
-    
-    var client: MSClient?
-    
-    var model: [AuthorRecord]? = []
-    
+class AnonymousTableViewController: ScoopsTableViewController {
+  /*
     func addNewScoop() {
         let alert = UIAlertController(title: "New Scoop", message: "Write Author's name", preferredStyle: .alert)
         
@@ -41,7 +37,7 @@ class AnonymousTableViewController: UITableViewController {
         }
         present(alert, animated: true, completion: nil)
     }
- 
+ */
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +50,7 @@ class AnonymousTableViewController: UITableViewController {
         
         
         
-        readAllItemsInTable()
+        //readAllItemsInTable()
         
     }
     
@@ -63,6 +59,12 @@ class AnonymousTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        return super.tableView(withCellName: "anonymousCell", tableView, cellForRowAt: indexPath)
+    }
+    
+    /*
     // MARK: - CRUD Authors table
     
     func insertNewAuthor(name: String, lastname: String) {
@@ -178,7 +180,7 @@ class AnonymousTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
     }
-    
+  */
     
     /*
      // Override to support rearranging the table view.
