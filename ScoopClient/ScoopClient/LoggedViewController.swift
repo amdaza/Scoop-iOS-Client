@@ -42,6 +42,12 @@ class LoggedViewController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       // readAllItemsInTable()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         readAllItemsInTable()
     }
     

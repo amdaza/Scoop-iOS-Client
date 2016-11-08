@@ -43,13 +43,9 @@ class NewPostViewController: UIViewController {
         }
        
         //uploadAuthor()
-        
-        let storyBoardL = UIStoryboard(name: "Logged", bundle: Bundle.main)
-        let vc = storyBoardL.instantiateViewController(withIdentifier: "loggedScene")
-        
-        self.present(vc, animated: true, completion: nil)
+ 
+        let _ = self.navigationController?.popViewController(animated: true)
     }
-
 
     
     func uploadAuthor() {
