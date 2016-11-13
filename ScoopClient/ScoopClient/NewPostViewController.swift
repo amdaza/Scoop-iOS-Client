@@ -13,10 +13,10 @@ class NewPostViewController: UIViewController {
 
     var client: MSClient?
     
-    @IBOutlet weak var postTxt: UITextField!
     @IBOutlet weak var titleTxt: UITextField!
     @IBOutlet weak var authorName: UITextField!
     @IBOutlet weak var authorLastname: UITextField!
+    @IBOutlet weak var postTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class NewPostViewController: UIViewController {
             .object(forKey: "userId") as? String
         
         if let title = titleTxt.text,
-            let content = postTxt.text,
+            let content = postTextView.text,
             let userId = authorId{
             
             insertNewScoop(title: title,

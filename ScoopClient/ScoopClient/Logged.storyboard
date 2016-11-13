@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DNJ-Ti-EfQ" id="xcn-KM-kbX">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -66,20 +66,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EsM-yU-aWb">
-                                <nil key="textColor"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UFk-OL-GfH">
+                                <frame key="frameInset" minX="16" minY="159" height="32.09%" maxX="16"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author's name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L2g-yd-fb1">
-                                <frame key="frameInset" minX="16" minY="213" height="30" maxX="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author's lastname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R6O-tV-ZIC">
+                                <frame key="frameInset" minX="16" minY="431" height="30" maxX="16"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author's lastname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R6O-tV-ZIC">
-                                <frame key="frameInset" minX="16" minY="269" height="30" maxX="16"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author's name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L2g-yd-fb1">
+                                <frame key="frameInset" minX="16" minY="375" height="30" maxX="16"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -88,12 +90,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="EsM-yU-aWb" firstAttribute="trailing" secondItem="nQy-Ap-4UG" secondAttribute="trailing" id="5C0-oF-pH7"/>
-                            <constraint firstItem="EsM-yU-aWb" firstAttribute="leading" secondItem="nQy-Ap-4UG" secondAttribute="leading" id="7OL-Mf-9Hf"/>
                             <constraint firstItem="nQy-Ap-4UG" firstAttribute="trailing" secondItem="RSW-Zv-XgN" secondAttribute="trailingMargin" id="Bo4-iJ-iY7"/>
                             <constraint firstItem="nQy-Ap-4UG" firstAttribute="top" secondItem="ySy-aO-5Nc" secondAttribute="bottom" constant="40" id="boC-HG-AjA"/>
                             <constraint firstItem="nQy-Ap-4UG" firstAttribute="leading" secondItem="RSW-Zv-XgN" secondAttribute="leadingMargin" id="ics-1T-la5"/>
-                            <constraint firstItem="EsM-yU-aWb" firstAttribute="top" secondItem="nQy-Ap-4UG" secondAttribute="bottom" constant="22" id="tGc-na-RDE"/>
                         </constraints>
                     </view>
                     <toolbarItems>
@@ -106,7 +105,7 @@
                     <connections>
                         <outlet property="authorLastname" destination="R6O-tV-ZIC" id="Th9-U7-SzA"/>
                         <outlet property="authorName" destination="L2g-yd-fb1" id="P2V-cy-GlC"/>
-                        <outlet property="postTxt" destination="EsM-yU-aWb" id="Vt8-hK-PJt"/>
+                        <outlet property="postTextView" destination="UFk-OL-GfH" id="XeQ-Sn-3Sg"/>
                         <outlet property="titleTxt" destination="nQy-Ap-4UG" id="RJO-8s-b7g"/>
                     </connections>
                 </viewController>
