@@ -31,26 +31,32 @@ class NewPostViewController: UIViewController {
     
     @IBAction func uploadAction(_ sender: AnyObject) {
         
+        let authorId = UserDefaults.standard
+            .object(forKey: "userId") as? String
+        
         if let title = titleTxt.text,
             let content = postTxt.text,
-            let userId = UserDefaults.standard
-                .object(forKey: "userId") as? String {
+            let userId = authorId{
             
             insertNewScoop(title: title,
                        content: content,
                        published: true,
                        authorId: userId)
+            
+            if let name = authorName.text,
+                let lastname = authorLastname.text{
+                
+                upsertAuthor(name: name,
+                             lastname: lastname,
+                             userId: userId)
+                
+            }
         }
-       
-        //uploadAuthor()
  
         let _ = self.navigationController?.popViewController(animated: true)
     }
 
     
-    func uploadAuthor() {
-        
-    }
     
     func insertNewScoop(title: String,
                         content: String,
@@ -74,9 +80,75 @@ class NewPostViewController: UIViewController {
         }
     }
     
+    func upsertAuthor(name: String,
+                      lastname: String,
+                      userId: String) {
+        // Create a predicate that finds items where complete is false
+        let predicate =  NSPredicate(format: "userId == %@", userId)
+        
+        let tableMS = client?.table(withName: "Authors")
+        
+        // Query the TodoItem table
+        tableMS?.read(with: predicate) { (result, error) in
+            
+            if let err = error {
+                print("ERROR ", err)
+                
+            } else if let items = result?.items {
+                
+                if items.count > 0 {
+                    
+                    if var author = items.first{
+                        author["name"] = name
+                        author["lastname"] = lastname
+                    
+                    
+                        self.updateAuthor(author: author,
+                                          parameters: nil)
+                    }
+                } else {
+                    self.insertAuthor(name: name, lastname: lastname, userId: userId)
+                    
+                }
+            }
+        }
+    }
     
+    func updateAuthor(author: [AnyHashable: Any],
+                      parameters: [AnyHashable: Any]?) {
+
+        let tableMS = client?.table(withName: "Authors")
+        
+        tableMS?.update(author, parameters: parameters, completion: { (result, error) -> Void in
+            if let err = error {
+                print("ERROR ", err)
+            } else if let item = result {
+                print("Todo Item: ", item["text"])
+            }
+        })
+
+    }
     
-    
+    func insertAuthor(name: String,
+                      lastname: String,
+                      userId: String) {
+        let tableMS = client?.table(withName: "Authors")
+        
+        tableMS?.insert(["name": name,
+                         "lastname": lastname,
+                         "userId": userId]) { (result, error) in
+                            
+                            if let _ = error {
+                                print(error)
+                                return
+                            }
+                            
+                            print(result)
+                            
+        }
+
+    }
+
     
     /*
     // MARK: - Navigation
