@@ -38,22 +38,6 @@ class ScoopsTableViewController: UITableViewController {
     // MARK: - CRUD Scoops table
     
     
-    func deleteAuthorRecord(item: ScoopRecord) {
-        
-        let tableMS = client?.table(withName: "Scoops")
-        
-        tableMS?.delete(item) { (result, error) in
-            
-            if let _ = error {
-                print(error)
-                return
-            }
-            
-            // Refresh table
-            self.readAllItemsInTable()
-        }
-    }
-    
     func readAllItemsInTable() {
         let tableMS = client?.table(withName: "Scoops")
         
@@ -97,11 +81,6 @@ class ScoopsTableViewController: UITableViewController {
         return (model?.count)!
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = model?[indexPath.row]
-        
-        //performSegue(withIdentifier: "detailAuthor", sender: item)
-    }
     
     func tableView(withCellName cellId: String, _ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {        
         
@@ -116,25 +95,7 @@ class ScoopsTableViewController: UITableViewController {
         return cell
     }
     
-    
-    
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.beginUpdates()
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            let item = self.model?[indexPath.row]
-            
-            self.deleteAuthorRecord(item: item!)
-            self.model?.remove(at: indexPath.row)
-            
-            tableView.endUpdates()
-            
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
-    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
