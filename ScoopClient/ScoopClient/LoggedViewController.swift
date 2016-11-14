@@ -10,7 +10,19 @@ import UIKit
 //import TwitterKit
 
 
+
 class LoggedViewController: ScoopsTableViewController{
+    
+    @IBAction func backButton(_ sender: AnyObject) {
+    
+        let storyBoardA = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        if let navController = storyBoardA.instantiateViewController(withIdentifier: "firstView") as? UINavigationController {
+            
+            self.present(navController, animated: true, completion: nil)
+        }
+    }
+    
     
     @IBAction func logoutAction(_ sender: AnyObject) {
         

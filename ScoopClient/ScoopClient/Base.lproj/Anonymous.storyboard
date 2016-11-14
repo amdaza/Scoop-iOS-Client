@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b4P-Ar-eus" id="Ttz-6Q-Our">
-                                    <frame key="frameInset" width="375" height="44"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -29,11 +29,56 @@
                             <outlet property="delegate" destination="HvR-dc-x2a" id="3bE-D3-cEv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Scoops" id="52c-jS-ll9" userLabel="Navigation Item"/>
+                    <navigationItem key="navigationItem" title="Scoops" id="52c-jS-ll9" userLabel="Navigation Item">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="poD-Fl-3oc">
+                            <connections>
+                                <action selector="backButton:" destination="HvR-dc-x2a" id="q57-Wj-WNV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="mlx-VU-vc0" kind="show" identifier="postDetail" id="0BY-KX-qwZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUN-dU-U7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="460" y="203"/>
+        </scene>
+        <!--Post View Controller-->
+        <scene sceneID="eYO-ht-obw">
+            <objects>
+                <viewController storyboardIdentifier="postDetailView" id="mlx-VU-vc0" customClass="PostViewController" customModule="ScoopClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ydq-TE-QDR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qux-og-ch5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yMW-yH-HzJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KfG-qO-a9o">
+                                <frame key="frameInset" minY="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaJ-Yb-X46">
+                                        <rect key="frame" x="8" y="-56" width="359" height="587"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="postTextView" destination="YaJ-Yb-X46" id="Aal-uO-95M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KGs-0T-VM8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1274.4000000000001" y="201.94902548725639"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dHy-Dg-TKb">

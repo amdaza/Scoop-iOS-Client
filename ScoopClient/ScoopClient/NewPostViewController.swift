@@ -12,6 +12,7 @@ import UIKit
 class NewPostViewController: UIViewController {
 
     var client: MSClient?
+    var author: [AnyHashable: Any]?
     
     @IBOutlet weak var titleTxt: UITextField!
     @IBOutlet weak var authorName: UITextField!
@@ -22,6 +23,7 @@ class NewPostViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        readAuthor()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,10 +48,13 @@ class NewPostViewController: UIViewController {
             if let name = authorName.text,
                 let lastname = authorLastname.text{
                 
-                upsertAuthor(name: name,
-                             lastname: lastname,
-                             userId: userId)
+                if name != self.author?["name"] as? String
+                    && lastname != self.author?["lastname"] as? String{
                 
+                    upsertAuthor(name: name,
+                                 lastname: lastname,
+                                 userId: userId)
+                }
             }
         }
  
@@ -80,38 +85,53 @@ class NewPostViewController: UIViewController {
         }
     }
     
+    func readAuthor() {
+        
+        if let userId = UserDefaults.standard
+            .object(forKey: "userId") as? String{
+            
+            // Create a predicate that finds items where complete is false
+            let predicate =  NSPredicate(format: "userId == %@", userId)
+        
+            let tableMS = client?.table(withName: "Authors")
+        
+            // Query the table
+            tableMS?.read(with: predicate) { (result, error) in
+            
+                if let err = error {
+                    print("ERROR ", err)
+                    
+                } else if let items = result?.items {
+                
+                    if items.count > 0 {
+                    
+                        self.author = items.first
+                    
+                        DispatchQueue.main.async {
+                            self.authorName.text = self.author?["name"] as! String?
+                            self.authorLastname.text = self.author?["lastname"] as! String?
+                        }
+                    }
+                }
+            }
+
+        }
+        
+           }
+
+    
     func upsertAuthor(name: String,
                       lastname: String,
                       userId: String) {
-        // Create a predicate that finds items where complete is false
-        let predicate =  NSPredicate(format: "userId == %@", userId)
-        
-        let tableMS = client?.table(withName: "Authors")
-        
-        // Query the TodoItem table
-        tableMS?.read(with: predicate) { (result, error) in
-            
-            if let err = error {
-                print("ERROR ", err)
-                
-            } else if let items = result?.items {
-                
-                if items.count > 0 {
+        if let auth = self.author {
                     
-                    if var author = items.first{
-                        author["name"] = name
-                        author["lastname"] = lastname
-                    
-                    
-                        self.updateAuthor(author: author,
+            self.updateAuthor(author: auth,
                                           parameters: nil)
-                    }
-                } else {
-                    self.insertAuthor(name: name, lastname: lastname, userId: userId)
-                    
-                }
-            }
+            
+        } else {
+            self.insertAuthor(name: name, lastname: lastname, userId: userId)
         }
+        
     }
     
     func updateAuthor(author: [AnyHashable: Any],
@@ -123,7 +143,7 @@ class NewPostViewController: UIViewController {
             if let err = error {
                 print("ERROR ", err)
             } else if let item = result {
-                print("Todo Item: ", item["text"])
+                print(item)
             }
         })
 

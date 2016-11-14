@@ -38,6 +38,11 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="aQf-cL-FQ0">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="l26-mg-0rM">
+                            <connections>
+                                <action selector="backButton:" destination="FKY-1a-SSe" id="ZrO-9q-6V8"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="i7y-dr-zSZ">
                             <connections>
                                 <segue destination="3EZ-21-ebQ" kind="show" identifier="newPost" id="RRA-6f-jhg"/>

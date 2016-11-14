@@ -23,6 +23,7 @@
 		1C2E0DB11DC67660000A3C59 /* AnonymousTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2E0DAF1DC67660000A3C59 /* AnonymousTableViewController.swift */; };
 		1C2E0DBB1DC677D7000A3C59 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C2E0DBA1DC677D7000A3C59 /* WebKit.framework */; };
 		1C5030711DD2582500E87A1C /* ScoopsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5030701DD2582500E87A1C /* ScoopsTableViewController.swift */; };
+		1C813AF21DD9353000CC67B8 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C813AF11DD9353000CC67B8 /* PostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		1C2E0DAF1DC67660000A3C59 /* AnonymousTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnonymousTableViewController.swift; path = ../AnonymousTableViewController.swift; sourceTree = "<group>"; };
 		1C2E0DBA1DC677D7000A3C59 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1C5030701DD2582500E87A1C /* ScoopsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoopsTableViewController.swift; sourceTree = "<group>"; };
+		1C813AF11DD9353000CC67B8 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				1C139AD01DC687550031A24F /* Anonymous.storyboard */,
+				1C813AF11DD9353000CC67B8 /* PostViewController.swift */,
 				1C2E0DAF1DC67660000A3C59 /* AnonymousTableViewController.swift */,
 			);
 			name = Anonymous;
@@ -332,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C813AF21DD9353000CC67B8 /* PostViewController.swift in Sources */,
 				1C2E0DB11DC67660000A3C59 /* AnonymousTableViewController.swift in Sources */,
 				1C270B1A1DCE26C400E0E534 /* PrincipalViewController.swift in Sources */,
 				1C2E0D861DC66744000A3C59 /* ScoopClient.xcdatamodeld in Sources */,

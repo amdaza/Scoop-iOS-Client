@@ -10,7 +10,7 @@
         <!--Principal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PrincipalViewController" customModule="ScoopClient" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginView" id="BYZ-38-t0r" customClass="PrincipalViewController" customModule="ScoopClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -62,7 +62,7 @@
         <!--Navigation Controller-->
         <scene sceneID="V55-KM-Mv5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H2t-rV-VQt" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="firstView" automaticallyAdjustsScrollViewInsets="NO" id="H2t-rV-VQt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uPD-7i-BHd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
