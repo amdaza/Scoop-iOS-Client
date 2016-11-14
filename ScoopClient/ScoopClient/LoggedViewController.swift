@@ -96,10 +96,55 @@ class LoggedViewController: ScoopsTableViewController{
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        readAuthorItemsInTable()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    // MARK: - CRUD Scoops table
+    
+    
+    func readAuthorItemsInTable() {
+        
+        if let userId = UserDefaults.standard
+            .object(forKey: "userId") as? String{
+            let tableMS = client?.table(withName: "Scoops")
+        
+            // Create a predicate that finds items where complete is false
+            let predicate =  NSPredicate(format: "authorId == %@", userId)
+        
+            tableMS?.read(with: predicate) { (results, error) in
+                if let _ = error {
+                    print(error)
+                    return
+                }
+            
+                if !((self.model?.isEmpty)!) {
+                    self.model?.removeAll()
+                }
+            
+                if let items = results {
+                    for item in items.items! {
+                        self.model?.append(item as! [String: AnyObject])
+                    }
+                
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                }
+            }
+        } else {
+            readAllItemsInTable()
+        }
+    }
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         

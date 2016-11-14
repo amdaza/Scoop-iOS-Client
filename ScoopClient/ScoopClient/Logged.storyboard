@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Logged View Controller-->
+        <!--Your posts-->
         <scene sceneID="Hxt-lz-1j6">
             <objects>
                 <tableViewController storyboardIdentifier="tableLoggedScene" id="FKY-1a-SSe" customClass="LoggedViewController" customModule="ScoopClient" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,7 +37,7 @@
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="aQf-cL-FQ0">
+                    <navigationItem key="navigationItem" title="Your posts" id="aQf-cL-FQ0">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="l26-mg-0rM">
                             <connections>
                                 <action selector="backButton:" destination="FKY-1a-SSe" id="ZrO-9q-6V8"/>
